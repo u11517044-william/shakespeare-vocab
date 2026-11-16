@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>莎士比亞經典劇本詞彙 A–Z 辭典</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Noto+Serif+TC:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- 節目單標題 -->
+    <header class="playbill">
+      <p class="eyebrow">THE GLOBE THEATRE · PRESENTS</p>
+      <h1 class="title">
+        莎士比亞經典劇本詞彙
+        <span class="title-en">A–Z Lexicon of Shakespeare</span>
+      </h1>
+      <div class="ornament" aria-hidden="true"><span></span><i>❦</i><span></span></div>
+      <p class="subtitle">一份獻給文學與戲劇愛好者的字母節目單</p>
+    </header>
+
+    <!-- A–Z 索引列 -->
+    <nav id="index-nav" class="index-nav" aria-label="字母索引"></nav>
+
+    <!-- 單卡學習區 -->
+    <main>
+      <article id="card" class="card" tabindex="0" aria-live="polite">
+        <span class="corner tl" aria-hidden="true"></span>
+        <span class="corner tr" aria-hidden="true"></span>
+        <span class="corner bl" aria-hidden="true"></span>
+        <span class="corner br" aria-hidden="true"></span>
+
+        <div class="card-head">
+          <div id="badge" class="badge" aria-label="字母">A a</div>
+          <p id="play" class="play-ref"></p>
+        </div>
+
+        <figure class="frame">
+          <img id="img" class="frame-img" src="" alt="">
+          <figcaption id="caption" class="frame-caption"></figcaption>
+        </figure>
+
+        <!-- 答案區（小考模式下遮蔽） -->
+        <section id="answer" class="word-block">
+          <h2 id="word" class="word"></h2>
+          <p id="phonetic" class="phonetic"></p>
+          <p id="pos" class="pos"></p>
+        </section>
+        <section id="mystery" class="mystery" hidden>
+          <p class="mystery-mark">？ ？ ？</p>
+          <p class="mystery-text">這個字是什麼？看圖、讀金句，猜猜看。</p>
+        </section>
+
+        <!-- 金句引文框 -->
+        <blockquote class="quote">
+          <p id="quote-en" class="quote-en"></p>
+          <p id="quote-zh" class="quote-zh"></p>
+          <footer id="quote-source" class="quote-source"></footer>
+        </blockquote>
+
+        <!-- 發音按鈕 -->
+        <div class="speak-row">
+          <button id="btn-speak-word" class="btn btn-gold" type="button">
+            <span aria-hidden="true">♪</span> 朗讀單字
+          </button>
+          <button id="btn-speak-quote" class="btn btn-gold" type="button">
+            <span aria-hidden="true">♫</span> 朗讀金句
+          </button>
+        </div>
+        <p id="speech-note" class="speech-note" hidden></p>
+
+        <p id="quiz-hint" class="quiz-hint" hidden>點擊卡片任意處，揭曉答案</p>
+      </article>
+
+      <!-- 導覽與測驗 -->
+      <div class="controls">
+        <button id="btn-prev" class="btn btn-wine" type="button">◀ 上一張 Prev</button>
+        <button id="btn-quiz" class="btn btn-toggle" type="button" aria-pressed="false">
+          <span class="switch" aria-hidden="true"></span>
+          <span id="quiz-label">遮蔽單字練習（文青小考）</span>
+        </button>
+        <button id="btn-next" class="btn btn-wine" type="button">下一張 Next ▶</button>
+      </div>
+      <p id="counter" class="counter">Scene 1 / 26</p>
+    </main>
+
+    <footer class="page-foot">
+      <p>“All the world’s a stage.” — As You Like It</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
